@@ -1,4 +1,4 @@
 ## Afif Dev CV
 
 
-![](https://i.giphy.com/media/QNFhOolVeCzPQ2Mx85/giphy.webp)
+![](https://i.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.webp)
