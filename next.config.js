@@ -9,6 +9,10 @@ const nextConfig = {
       "/contact": { page: "/contact" },
     };
   },
+  images: {
+    loader: "akamai",
+    path: "",
+  },
 };
 
 module.exports = nextConfig;
