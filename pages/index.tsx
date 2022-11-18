@@ -18,7 +18,7 @@ const Page = () => {
           <Stack spacing={8} align="center" w="full">
             <Image mt={-10} src="/img/afif-dev.jpg" alt="Afif Dev" borderRadius="full" boxSize="150px" boxShadow={"0px 4px 28px -8px #D53F8C"} />
             <Heading as="h2" size="2xl">
-              Hi, I'm Afif!
+              Hi, {`I'm`} Afif!
             </Heading>
             <Text>Welcome to my personal site!</Text>
 
