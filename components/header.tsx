@@ -4,7 +4,7 @@ import { Box, Flex, HStack, Link, IconButton, Button, Menu, MenuButton, MenuList
 import { HamburgerIcon, CloseIcon, AddIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { BsGithub } from "react-icons/bs";
 
-const Links = ["About", "Skills", "Experinces", "Projects", "Others"];
+const Links = ["About", "Skills", "Experinces", "Projects"];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
