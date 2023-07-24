@@ -1,7 +1,8 @@
-import type { ReactElement } from "react";
+// import type { ReactElement } from "react";
 import Layout from "../components/layout";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import NextLink from 'next/link'
+import { Link } from "@chakra-ui/react";
 import styles from "../styles/Home.module.css";
 
 const Page = () => {
@@ -15,9 +16,14 @@ const Page = () => {
         <p className="{styles.description} text-3xl font-bold underline">
           Get started by editing <code className={styles.code}>pages/index.tsx</code>
         </p>
-        <Link href="/">
+        <Link as={NextLink} href="/">
           <a>Back to Home</a>
         </Link>
+        <p>
+          <Link as={NextLink} href="/contact">
+            <a>Contact</a>
+          </Link>
+        </p>
       </main>
     </Layout>
   );
