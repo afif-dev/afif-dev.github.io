@@ -1,11 +1,22 @@
 // import type { ReactElement } from "react";
 import Layout from "../components/layout";
 import { motion } from "framer-motion";
-import NextLink from 'next/link'
+import NextLink from "next/link";
 import { Link } from "@chakra-ui/react";
 import styles from "../styles/Home.module.css";
+import useSWR from "swr";
+
+//Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
+const fetcher = (url: any) => fetch(url).then((res) => res.json());
 
 const Page = () => {
+  const { data, error } = useSWR("/data.json", fetcher);
+
+  //Handle the error state
+  if (error) return <div>Failed to load</div>;
+  //Handle the loading state
+  if (!data) return <div>Loading...</div>;
+
   return (
     <Layout>
       <main className={styles.main}>
@@ -24,6 +35,13 @@ const Page = () => {
             <a>Contact</a>
           </Link>
         </p>
+        <div>
+          <h1>My Framework from file</h1>
+          <ul>
+            <li>Name: {data.record.name}</li>
+            <li>Language: {data.record.language}</li>
+          </ul>
+        </div>
       </main>
     </Layout>
   );
