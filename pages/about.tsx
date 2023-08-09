@@ -10,7 +10,7 @@ import useSWR from "swr";
 const fetcher = (url: any) => fetch(url).then((res) => res.json());
 
 const Page = () => {
-  const { data, error } = useSWR("/data.json", fetcher);
+  const { data, error } = useSWR("/data.json", fetcher, { revalidateIfStale: false, revalidateOnFocus: false, revalidateOnReconnect: false });
 
   //Handle the error state
   if (error) return <div>Failed to load</div>;
