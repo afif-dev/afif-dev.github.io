@@ -1,12 +1,35 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { ReactNode } from "react";
+// import { ReactNode } from "react";
+import NextLink from 'next/link';
 import { Box, Flex, HStack, Link, IconButton, Button, Menu, MenuButton, MenuList, MenuItem, MenuDivider, useDisclosure, useColorMode, useColorModeValue, Stack } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, AddIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { BsGithub } from "react-icons/bs";
 
-const Links = ["About", "Skills", "Experinces", "Projects"];
+const MainLink = [
+  {
+    "link": "/about",
+    "title": "About"
+  },
+  {
+    "link": "/",
+    "title": "Skills"
+  },
+  {
+    "link": "/",
+    "title": "Experinces"
+  },
+  {
+    "link": "/",
+    "title": "Projects"
+  },
+  {
+    "link": "/contact",
+    "title": "Contact"
+  }
+]
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+
+const MainNavLink = ({ link, title }: { link: string, title: string }) => (
   <Link
     px={2}
     py={1}
@@ -15,9 +38,10 @@ const NavLink = ({ children }: { children: ReactNode }) => (
       textDecoration: "none",
       bg: useColorModeValue("gray.200", "gray.700"),
     }}
-    href={"#"}
+    as={NextLink}
+    href={link}
   >
-    {children}
+    {title}
   </Link>
 );
 
@@ -30,14 +54,18 @@ export default function withAction() {
       <Box pos="relative" zIndex={1} px={10}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <HStack spacing={1} alignItems={"center"}>
-            <Box>Afif Dev</Box>
+            <Box>
+              <Link as={NextLink} href='/'>
+                Afif Dev
+              </Link>
+            </Box>
           </HStack>
 
           <Flex alignItems={"center"}>
             <HStack spacing={8} alignItems={"center"} mr={4}>
               <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
-                {Links.map((link) => (
-                  <NavLink key={link}>{link}</NavLink>
+                {MainLink.map((menu) => (
+                  <MainNavLink key={menu.title} title={menu.title} link={menu.link} ></MainNavLink>
                 ))}
               </HStack>
             </HStack>
@@ -69,13 +97,13 @@ export default function withAction() {
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+              {MainLink.map((menu) => (
+                <MainNavLink key={menu.title} title={menu.title} link={menu.link} ></MainNavLink>
               ))}
             </Stack>
           </Box>
         ) : null}
       </Box>
-    </Box>
+    </Box >
   );
 }
