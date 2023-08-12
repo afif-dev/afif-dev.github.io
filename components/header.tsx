@@ -78,15 +78,12 @@ export default function withAction() {
                 ))}
               </HStack>
             </HStack>
-
             <Button onClick={toggleColorMode} size={"md"} mr={4} variant={"solid"}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
-
             <Button as={Link} size={"md"} mr={4} href="https://github.com/afif-dev" isExternal>
               <BsGithub />
             </Button>
-
             <IconButton size={"md"} icon={isOpen ? <CloseIcon /> : <HamburgerIcon />} aria-label={"Open Menu"} display={{ lg: "none" }} onClick={isOpen ? onClose : onOpen} />
           </Flex>
         </Flex>

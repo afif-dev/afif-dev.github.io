@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import Layout from "../components/layout";
-import { Container, Box, Stack, Image, Text, Heading, useColorModeValue, Center, keyframes } from "@chakra-ui/react";
+import { Container, Box, Stack, Image, Text, Heading, useColorModeValue, AspectRatio, Center } from "@chakra-ui/react";
 // import { AnimatePresence, motion } from "framer-motion";
 
 const Marquee = () => (
@@ -21,9 +21,11 @@ const Page = () => {
     <Layout>
       <Box position="relative" zIndex={0} minH={{ base: "lg", md: "2xl" }}>
         <Box pos="absolute" w="full" maxH="2xl" overflow="hidden">
-          <video autoPlay loop muted width="100%">
-            <source src="/video/cover.mp4" type="video/mp4" />
-          </video>
+          <AspectRatio maxW="100%" ratio={{ base: 1, md: 16 / 9 }}>
+            <video autoPlay loop muted width="100%">
+              <source src="/video/cover.mp4" type="video/mp4" />
+            </video>
+          </AspectRatio>
           <Box pos="absolute" w="full" h="full" top={0} bgGradient={useColorModeValue("linear(to-t, white, whiteAlpha.800, whiteAlpha.100)", "linear(to-t, black, blackAlpha.800, blackAlpha.100)")}></Box>
         </Box>
 
