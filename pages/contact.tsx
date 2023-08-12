@@ -1,6 +1,6 @@
 // import type { ReactElement } from "react";
 import Layout from "../components/layout";
-import NextLink from 'next/link'
+import NextLink from "next/link";
 import { Link } from "@chakra-ui/react";
 import styles from "../styles/Home.module.css";
 
@@ -9,14 +9,23 @@ const Page = () => {
     <Layout>
       <main className={styles.main}>
         <h1 className={styles.title}>Contact Page!</h1>
-        <Link as={NextLink} href="/">
-          <a>Back to Home</a>
-        </Link>
-        <p>
-          <Link as={NextLink} href="/about">
-            <a>About</a>
+        <NextLink href="/" passHref>
+          <Link color="teal.500" display={"block"}>
+            Back to Home
           </Link>
-        </p>
+        </NextLink>
+
+        <NextLink href="/about" passHref>
+          <Link color="pink.500" display={"block"}>
+            About
+          </Link>
+        </NextLink>
+
+        <NextLink href="/" passHref>
+          <Link color="teal.500" display={"block"}>
+            Home
+          </Link>
+        </NextLink>
       </main>
     </Layout>
   );
