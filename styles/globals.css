@@ -48,11 +48,11 @@ span {
   float: left;
   overflow: hidden;
   width: 100%;
-  /* font-size: 7.65rem; */
+  font-size: 7.65rem;
   font-weight: 800;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: rgba(255, 255, 255, 0.3);
+  -webkit-text-stroke-color: rgb(85, 60, 154, 0.36);
   text-transform: uppercase;
 }
 
