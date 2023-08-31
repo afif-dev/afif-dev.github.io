@@ -4,19 +4,12 @@ import { motion } from "framer-motion";
 import NextLink from "next/link";
 import { Link } from "@chakra-ui/react";
 import styles from "../styles/Home.module.css";
-import useSWR from "swr";
+import data from "../public/data.json";
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
 const fetcher = (url: any) => fetch(url).then((res) => res.json());
 
 const Page = () => {
-  const { data, error } = useSWR("/data.json", fetcher, { revalidateIfStale: false, revalidateOnFocus: false, revalidateOnReconnect: false });
-
-  //Handle the error state
-  if (error) return <div>Failed to load</div>;
-  //Handle the loading state
-  if (!data) return <div>Loading...</div>;
-
   return (
     <Layout>
       <main className={styles.main}>
