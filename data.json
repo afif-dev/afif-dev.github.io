@@ -5,5 +5,114 @@
     "name": "Next.js",
     "language": "JavaScript"
   },
-  "skills": [{ "name": "PHP" }, { "name": "GO" }, { "name": "Python" }, { "name": "JavaScript" }]
+  "contact": {
+    "github": "https://github.com/afif-dev",
+    "twitter": "https://twitter.com/afif_dev"
+  },
+  "top-skills": ["Web App Development", "Desktop App Development", "Hybrid Mobile Development", "CLI App Development", "Web Scraping 👩‍💻", "Find & Fixing Bugs 🐛"],
+  "programming": [{ "name": "PHP" }, { "name": "GO" }, { "name": "JavaScript" }, { "name": "NodeJS" }, { "name": "Python" }, { "name": "C#" }],
+  "tools": {},
+  "about": "Hello there! 👋 I'm an experienced web developer with a journey that began back in 2009. My educational background is a Higher National Diploma (HND) in Computing, specialized in Business Information Technology. Throughout my professional journey, I've had the privilege of working across diverse industries including computer software, fashion, automotive, agency, and marketing.\n\nMy proficiency spans a wide spectrum of programming languages – PHP, C#, Go, NodeJs, Python, and Javascript – enabling me to craft remarkable digital experiences. Yet, my skill set isn't confined to web development; I've also successfully crafted CLI applications, hybrid desktop and mobile applications.\n\nWhat sets me apart is my unwavering commitment to staying ahead of the curve. I ardently stay updated with the latest trends in web development, ensuring that I wield the latest tools and techniques.\n\nBeyond coding, I nurture a profound passion for exploration. Whether it's venturing into new destinations through travel, leisurely strolls by the city or the beach, or finding delight in café and mall adventures – I take pleasure in life's simple joys.\n\nIn a nutshell, I'm a dedicated developer who loves turning ideas into functional, user-friendly, and visually appealing digital solutions. My journey through various industries has given me a unique perspective that I bring to every project. Looking forward to exploring new horizons and crafting more digital wonders! 🚀",
+  "education": [
+    { "duration": "2007 – 2011", "edu_place": "Kolej Profesional Mara Beranang (Selangor, Malaysia)", "major": "Higher National Diploma (HND) in Computing (Business Information Technology)", "tech_stack": "MySQL, MSSQL, C++, C#, Visual Basic (.NET), Java, PHP, JavaScript, HTML, CSS", "final_project": "Develop Command Prompt(CMD), desktop, and web applications." },
+    { "duration": "2003 – 2005", "edu_place": "SMK Bukit Merchu (Perak, Malaysia)", "major": "Information Technology & Arts", "tech_stack": "Visual Basic (.NET)", "final_project": "Develop Windows GUI application." }
+  ],
+  "experiences": [
+    {
+      "duration": "Oct 2020 - Jun 2022",
+      "position_title": "Freelance Web Developer",
+      "company_name": "2x Marketing",
+      "company_desc": "2X is B2B Marketing-as-a-Service (MaaS) firm, focused on providing end-to-end marketing expertise for established companies in the technology and professional services industries. The business is owned by an American company, and its clients include startups, SMEs, tech companies, and corporations from the US.",
+      "company_size": "100+",
+      "team_size": "3 - 6",
+      "company_location": "Kuala Lumpur, Malaysia",
+      "industry_tag": ["marketing", "advertising", "agency"],
+      "website": "https://www.2x.marketing",
+      "task_project": ""
+    },
+    {
+      "duration": "Aug 2019 - May 2020",
+      "position_title": "Senior Web Developer",
+      "company_name": "MyTukar Sdn Bhd",
+      "company_desc": "MyTukar is an online car bidding platform that allows you to sell used cars effortlessly and hassle-free through live bidding with over 1,000 dealers nationwide.",
+      "company_size": "100+",
+      "team_size": "2 - 20",
+      "company_location": "Kuala Lumpur, Malaysia",
+      "industry_tag": ["automobile, vehicle, e-commerce"],
+      "website": "https://mytukar.com",
+      "task_project": ""
+    },
+    {
+      "duration": "Sept 2018 - May 2019",
+      "position_title": "Senior Web Developer",
+      "company_name": "APD Digital Services Sdn Bhd (knows as GrowthOps)",
+      "company_desc": "APD is a 360-degree digital services business that delivers growth to its clients. We consult with companies across the region to understand their business challenges and their digital needs in this constantly changing category. The clients primarily consist of local telcos, corporations, banks, and manufacturers who seek to enhance their digital marketing strategies.",
+      "company_size": "100+",
+      "team_size": "3 - 6",
+      "company_location": "Kuala Lumpur, Malaysia",
+      "industry_tag": ["marketing", "advertising", "agency"],
+      "website": "https://www.growthops.asia",
+      "task_project": ""
+    },
+    {
+      "duration": "Jun 2015 - Jul 2018",
+      "position_title": "Web Developer",
+      "company_name": "Poplook Sdn Bhd",
+      "company_desc": "POPLOOK is one of Malaysia's leading e-commerce and online stores specializing in modest fashion and ships worldwide.",
+      "company_size": "40",
+      "team_size": "4 - 6",
+      "company_location": "Kuala Lumpur, Malaysia",
+      "industry_tag": ["fashion", "e-commerce"],
+      "website": "https://poplook.com",
+      "task_project": ""
+    },
+    {
+      "duration": "Aug 2013 - Apr 2015",
+      "position_title": "PHP Analyst Programmer",
+      "company_name": "Algo Experts Pvt. Ltd",
+      "company_desc": "",
+      "company_size": "40",
+      "team_size": "4 - 20",
+      "company_location": "Kuala Lumpur, Malaysia",
+      "industry_tag": ["software", "service", "trading", "forex broker"],
+      "website": "http://www.opcbiz.com",
+      "task_project": ""
+    },
+    {
+      "duration": "Mar 2012 - Jul 2013",
+      "position_title": "Web Developer cum Web Designer, Support Programme",
+      "company_name": "ORRA Sdn Bhd",
+      "company_desc": "OORA specializes in offering social media integrative solutions and membership. The business is owned by an Australian individual, and its clients consist of startups, SMEs, and manufacturing companies from Australia, Malaysia, and other countries.",
+      "company_size": "30",
+      "team_size": "2 - 6",
+      "company_location": "Selangor, Malaysia",
+      "industry_tag": ["software", "marketing", "advertising", "agency"],
+      "website": "",
+      "task_project": ""
+    },
+    {
+      "duration": "Jul 2011 – Dec 2013",
+      "position_title": "Web Designer",
+      "company_name": "Creative Dreams International Sdn Bhd (CDI)",
+      "company_desc": "CDI offers an opportunity for millions of students to score straight A's in their examinations through the company's e-learning program. It is also capable of assisting parents in acquiring financial independence through the company's unique business plan.",
+      "company_size": "20",
+      "team_size": "3",
+      "company_location": "Selangor, Malaysia",
+      "industry_tag": ["marketing", "advertising", "agency"],
+      "website": "https://www.creativedreams.net",
+      "task_project": ""
+    },
+    {
+      "duration": "Jun 2009 – Jun 2011",
+      "position_title": "Part-Time Web Designer and Developer",
+      "company_name": "Studio c88i",
+      "company_desc": "Studio c88i offers web and online marketing services for local businesses.",
+      "company_size": "2",
+      "team_size": "2",
+      "company_location": "Pahang, Malaysia",
+      "industry_tag": ["marketing", "advertising", "branding"],
+      "website": "",
+      "task_project": ""
+    }
+  ]
 }
