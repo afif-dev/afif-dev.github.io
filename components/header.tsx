@@ -63,7 +63,7 @@ export default function withAction() {
       <Box pos="relative" zIndex={1} px={10}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <HStack spacing={1} alignItems={"center"}>
-            <Box>
+            <Box fontWeight={700}>
               <Link as={NextLink} href="/">
                 Afif Dev
               </Link>
@@ -89,8 +89,8 @@ export default function withAction() {
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{ lg: "none" }}>
-            <Stack as={"nav"} spacing={4}>
+          <Box py={10} mx={-5} display={{ lg: "none" }} h="calc(100vh)">
+            <Stack as={"nav"} spacing={4} fontSize={36} fontWeight={100}>
               {MainLink.map((menu) => (
                 <MainNavLink key={menu.title} title={menu.title} link={menu.link}></MainNavLink>
               ))}

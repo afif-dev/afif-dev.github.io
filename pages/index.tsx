@@ -3,18 +3,28 @@ import Link from "next/link";
 import Layout from "../components/layout";
 import { Container, Box, Stack, Image, Text, Heading, useColorModeValue, AspectRatio, Center } from "@chakra-ui/react";
 // import { AnimatePresence, motion } from "framer-motion";
+import data from "../public/data.json";
 
-const Marquee = () => (
-  <Box w="full" zIndex={0} pos="absolute" top={{ base: "58%", sm: "51%" }} fontSize={{ base: 100, sm: 140 }} fontStyle="italic">
-    <div className="marquee">
-      <div className="marquee-inner">
-        <span>
-          <div>PHP . JS . Python . GO . PHP . JS . Python . GO</div>
-        </span>
+const Marquee = (props: any) => {
+  const data = props.data;
+  // console.log(data.programming);
+  return (
+    <Box w="full" zIndex={0} pos="absolute" top={{ base: "58%", sm: "51%" }} fontSize={{ base: 100, sm: 140 }} fontStyle="italic">
+      <div className="marquee">
+        <div className="marquee-inner">
+          <span>
+            <div>
+              {data.programming.map((programming: any) => (
+                <>{programming.name} . </>
+              ))}
+            </div>
+            {/* <div> PHP . JS . Python . GO . PHP . JS . Python . GO</div> */}
+          </span>
+        </div>
       </div>
-    </div>
-  </Box>
-);
+    </Box>
+  );
+};
 
 const Page = () => {
   return (
@@ -28,7 +38,6 @@ const Page = () => {
           </AspectRatio>
           <Box pos="absolute" w="full" h="full" top={0} bgGradient={useColorModeValue("linear(to-t, white, whiteAlpha.800, whiteAlpha.100)", "linear(to-t, black, blackAlpha.800, blackAlpha.100)")}></Box>
         </Box>
-
         <Container position="relative" maxW="4xl" pt={44} pb={20} zIndex={1} centerContent>
           <Image mt={-10} mb={10} src="/img/afif-dev.jpg" alt="Afif Dev" borderRadius="full" boxSize="150px" boxShadow={"0px 4px 28px -8px #D53F8C"} />
           <Stack spacing={{ base: "4", sm: "8" }} align={{ base: "left", sm: "center" }} w="full">
@@ -46,7 +55,7 @@ const Page = () => {
             </Text>
           </Stack>
         </Container>
-        <Marquee />
+        (data? <Marquee data={data} />: )
       </Box>
 
       <Container display="none" position="relative" zIndex={0} maxW="2xl" bg="blue.600" pt={16} centerContent>

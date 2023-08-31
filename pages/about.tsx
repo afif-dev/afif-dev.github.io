@@ -2,9 +2,10 @@
 import Layout from "../components/layout";
 import { motion } from "framer-motion";
 import NextLink from "next/link";
-import { Link } from "@chakra-ui/react";
+import { Link, Text } from "@chakra-ui/react";
 import styles from "../styles/Home.module.css";
 import useSWR from "swr";
+import udata from "../public/data.json";
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
 const fetcher = (url: any) => fetch(url).then((res) => res.json());
@@ -16,6 +17,8 @@ const Page = () => {
   if (error) return <div>Failed to load</div>;
   //Handle the loading state
   if (!data) return <div>Loading...</div>;
+
+  console.log(udata.about);
 
   return (
     <Layout>
@@ -37,10 +40,13 @@ const Page = () => {
         </p>
         <div>
           <h1>My Framework from file</h1>
-          <ul>
-            <li>Name: {data.record.name}</li>
-            <li>Language: {data.record.language}</li>
-          </ul>
+
+          {data.about.split("\n").map((item: string | null, i: number) => (
+            <Text mb="3" key={i}>
+              {item}
+            </Text>
+          ))}
+          <Text>{udata.about}</Text>
         </div>
       </main>
     </Layout>

@@ -43,8 +43,8 @@ const Page = () => {
             <li>
               Skills
               <ul>
-                {data.skills.map((skill: any) => (
-                  <li key={skill.name}>{skill.name}</li>
+                {data.programming.map((programming: any) => (
+                  <li key={programming.name}>{programming.name}</li>
                 ))}
               </ul>
             </li>

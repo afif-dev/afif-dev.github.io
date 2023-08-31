@@ -16,6 +16,10 @@ const theme = extendTheme({
   config,
   styles: {
     global: (props: StyleFunctionProps) => ({
+      fonts: {
+        heading: `'Outfit Variable', sans-serif`,
+        body: `'Outfit Variable', sans-serif`,
+      },
       body: {
         fontFamily: "body",
         // color: mode("gray.800", "whiteAlpha.900")(props),
