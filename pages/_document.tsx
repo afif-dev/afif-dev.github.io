@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta httpEquiv="Permissions-Policy" content="interest-cohort=(), user-id=()" />
+        <meta httpEquiv="Permissions-Policy" content="interest-cohort=()" />
       </Head>
       <body>
         <Main />
