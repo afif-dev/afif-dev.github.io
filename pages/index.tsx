@@ -55,7 +55,7 @@ const Page = () => {
             </Text>
           </Stack>
         </Container>
-        (data? <Marquee data={data} />: )
+        <Marquee data={data} />
       </Box>
 
       <Container display="none" position="relative" zIndex={0} maxW="2xl" bg="blue.600" pt={16} centerContent>
