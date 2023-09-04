@@ -71,7 +71,7 @@ export default function withAction() {
           </HStack>
 
           <Flex alignItems={"center"}>
-            <HStack spacing={8} alignItems={"center"} mr={4}>
+            <HStack spacing={8} display="none" alignItems={"center"} mr={4}>
               <HStack as={"nav"} spacing={2} display={{ base: "none", lg: "flex" }}>
                 {MainLink.map((menu) => (
                   <MainNavLink key={menu.title} title={menu.title} link={menu.link}></MainNavLink>
@@ -84,7 +84,7 @@ export default function withAction() {
             <Button as={Link} size={"md"} mr={4} href="https://github.com/afif-dev" isExternal>
               <BsGithub />
             </Button>
-            <IconButton size={"md"} icon={isOpen ? <CloseIcon /> : <HamburgerIcon />} aria-label={"Open Menu"} display={{ lg: "none" }} onClick={isOpen ? onClose : onOpen} />
+            {/* <IconButton size={"md"} icon={isOpen ? <CloseIcon /> : <HamburgerIcon />} aria-label={"Open Menu"} display={{ lg: "none" }} onClick={isOpen ? onClose : onOpen} /> */}
           </Flex>
         </Flex>
 
